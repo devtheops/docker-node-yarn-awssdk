@@ -21,6 +21,7 @@ RUN apk -v --update add \
     git clone https://github.com/tfutils/tfenv.git ~/.tfenv && \
     ln -s ~/.tfenv/bin/* /usr/local/bin && \
     tfenv install 0.12.13 && \
+    terraform -v && \
     apk -v --purge del py-pip && \
     rm /var/cache/apk/*
 
